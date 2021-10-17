@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0" style="color: white">Toal URL Section</h1>
+  </div>
+
+  <div id="wrapper">
+    <div class="container-fluid">
+      <!-- Page Heading -->
+      <!-- <h1 class="h3 mb-2 text-gray-800">Students List</h1> -->
+
+      <!-- DataTales Example -->
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">URL List</h6>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table
+              class="table table-bordered"
+              id="dataTable"
+              width="100%"
+              cellspacing="0"
+            >
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Shotened URL</th>
+                  <th>Original URL</th>
+                  <th>Total Clicks</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Id</th>
+                  <th>Shotened URL</th>
+                  <th>Original URL</th>
+                  <th>Total Clicks</th>
+                  <th>Action</th>
+                </tr>
+              </tfoot>
+              <tbody *ngFor="let item of urlList">
+                <tr>
+                  <td>{{ item.id }}</td>
+                  <td>
+                    <a
+                      href="{{ item.longUrl }}"
+                      target="_blank"
+                      (click)="registerCount(item.id)"
+                    >
+                      {{ item.shortUrl }}</a
+                    >
+                  </td>
+                  <td>{{ item.longUrl }}</td>
+                  <td>{{ item.count }}</td>
+                  <td>
+                    <div class="row">
+                      <div class="col">
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-sm"
+                          (click)="deleteUrl(item.id)"
+                        >
+                          DELETE
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

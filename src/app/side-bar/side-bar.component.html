@@ -1,0 +1,37 @@
+<div>
+  <ul
+    class="navbar-nav navbar-dark sidebar sidebar-dark accordion"
+    style="background-color: #219ebc"
+    id="accordionSidebar"
+  >
+    <a
+      class="sidebar-brand d-flex align-items-center justify-content-center"
+      [routerLink]="['/']"
+    >
+      <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-laugh-wink"></i>
+      </div>
+      <div class="sidebar-brand-text mx-3">URL SHOTENER</div>
+    </a>
+    <hr class="sidebar-divider my-0" style="background-color: white" />
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/dashboard']">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>DashBoard</span></a
+      >
+    </li>
+    <hr class="sidebar-divider" style="background-color: white" />
+    <div class="sidebar-heading" style="color : black ;">URLShotener Section</div>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/generateUrl']">
+        <span>Generate URL</span></a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/totalUrl']">
+        <span>Total URL's</span></a
+      >
+    </li>
+    <hr class="sidebar-divider" style="background-color: white" />
+  </ul>
+</div>

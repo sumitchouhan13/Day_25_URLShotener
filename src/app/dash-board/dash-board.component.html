@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0" style="color: white">Dashboard</h1>
+  </div>
+  <div class="card shadow mb-4" style="width: 100%">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div
+                    class="
+                      text-xs
+                      font-weight-bold
+                      text-primary text-uppercase
+                      mb-1
+                    "
+                  >
+                    Total Links
+                  </div>
+                  <span
+                    ><b>{{ totalLink }}</b></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div
+                    class="
+                      text-xs
+                      font-weight-bold
+                      text-primary text-uppercase
+                      mb-1
+                    "
+                  >
+                    Number of Clicks
+                  </div>
+                  <span
+                    ><b>{{ totalClicks }}</b></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-md-12 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <ngx-charts-bar-vertical
+                  [view]="view"
+                  [results]="single"
+                  [gradient]="gradient"
+                  [xAxis]="showXAxis"
+                  [yAxis]="showYAxis"
+                  [showXAxisLabel]="showXAxisLabel"
+                  [showYAxisLabel]="showYAxisLabel"
+                  [xAxisLabel]="xAxisLabel"
+                  [yAxisLabel]="yAxisLabel"
+                >
+                  >
+                </ngx-charts-bar-vertical>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card-body">
+          <div class="card-body">
+            <div class="chart-area">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ngx-charts-bar-vertical
+                    [view]="view"
+                    [results]="single"
+                    [gradient]="gradient"
+                    [xAxis]="showXAxis"
+                    [yAxis]="showYAxis"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel"
+                  >
+                    >
+                  </ngx-charts-bar-vertical>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
